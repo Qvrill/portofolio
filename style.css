@@ -1,0 +1,633 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar styles */
+.navbar {
+    background: rgba(255, 234, 234, 0.564); /* Warna putih dengan transparansi */
+    backdrop-filter: blur(10px); /* Efek blur */
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Menyusun elemen dalam baris */
+    justify-content: space-between; /* Memisahkan brand dan menu */
+    align-items: center; /* Vertikal align */
+}
+
+.navbar-header {
+    flex-grow: 1; /* Memungkinkan area ini untuk tumbuh */
+}
+
+.navbar .navbar-menu {
+    display: flex; /* Mengatur menu menjadi flexbox */
+}
+
+.navbar .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #B04E75;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.navbar .navbar-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Menyusun item dalam baris */
+    gap: 20px; /* Jarak antar item */
+}
+
+.navbar .navbar-menu ul li {
+    display: inline; /* Menjaga item tetap dalam baris */
+}
+
+.navbar .navbar-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px;
+    text-transform: uppercase;
+}
+.navbar .navbar-menu ul li a:hover {
+    color: #B04E75;
+}
+
+/* Hero Section styles */
+.hero {
+    height: 100vh;
+    background: url('back.png') no-repeat center center/cover; /* Ganti dengan jalur gambar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Menjaga posisi tetap */
+    color: white;
+}
+
+/* Menambahkan lapisan blur dengan efek semi-transparan */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.251); /* Warna putih transparan yang lebih lembut */
+    backdrop-filter: blur(0px); /* Efek blur */
+    z-index: 1; /* Menempatkan di belakang teks */
+}
+
+.hero-content {
+    position: relative; /* Memastikan konten teks berada di atas lapisan blur */
+    z-index: 2; /* Memastikan teks berada di atas lapisan blur */
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.hero-content h1 span {
+    color: #B04E75;
+}
+
+.hero-content p {
+    font-size: 20px;
+}
+
+.btn-resume {
+    background-color: #B04E75;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.btn-resume:hover {
+    background-color: #B04E75;
+}
+
+
+
+#education {
+    text-align: center;
+    margin: 50px 0;
+  }
+  
+  #education h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .timeline {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .education-item {
+    max-width: 30%;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .education-item::before {
+    content: ''; /*bulets*/
+    position: absolute;
+    width: 10px;
+    height: 10px; 
+    background-color: #C07191;
+    border-radius: 50%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  
+  /*.education-item::after {
+    content: '';/*garis*/
+   /* position: absolute;
+    width: 150px;
+    height: 2px;
+    background-color: #C57CFF;
+    left: calc(50% + 5px);
+    top: 5px;
+  }*/
+  
+  .education-item .date {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .education-item .degree {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .education-item .university {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  .education-item .location {
+    font-style: italic;
+    margin-bottom: 15px;
+  }
+  
+  .education-item .description {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+
+  /*experience*/
+ 
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #experience {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  #experience h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .timeline-left,
+  .timeline-right {
+    width: 45%;
+    padding: 0 20px;
+  }
+  
+  .timeline-left {
+    text-align: right;
+  }
+  
+  .timeline-right {
+    text-align: left;
+  }
+  
+  .timeline-center {
+    position: relative;
+    width: 10%;
+    text-align: center;
+  }
+  
+  .timeline-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #B04E75;
+    border-radius: 50%;
+  }
+  
+  .timeline-line {
+    display: block;
+    width: 2px;
+    height: 100%;
+    background-color: #c57cff;
+    margin: 10px auto 0;
+  }
+  
+  .timeline-item:last-child .timeline-line {
+    display: none; /* Hide line on the last item */
+  }
+  
+  .timeline-left h3,
+  .timeline-right h4 {
+    margin: 0;
+  }
+  
+  .timeline-left p,
+  .timeline-right p {
+    margin: 5px 0;
+  }
+
+  /*about me*/
+  #about {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+  }
+  
+  #about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .about-text {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #333;
+    justify-content: center;
+  }
+  
+  .about-image {
+    text-align: center;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #B04E75;
+  }
+  
+  /* Optional: Adding font awesome icons */
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+  
+
+  
+  #skills {
+    text-align: center;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column; /* Pastikan elemen diatur secara vertikal */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Agar seluruh bagian menyesuaikan tinggi layar */
+  }
+
+#Skills h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px
+}
+  .skills-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  
+}
+
+
+.skill { /*skilss*/
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-align: center;
+ 
+}
+
+.skill-name {
+    width: 40%;
+    text-align: left;
+
+}
+
+.progress-bar {
+    width: 55%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar-inner {
+    height: 15px;
+    background-color: #a13aff;
+    width: 0;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.skill-percentage {
+    width: 5%;
+    text-align: right;
+}
+
+/* Skill percentages */
+.photoshop .progress-bar-inner { width: 90%; }
+.illustrator .progress-bar-inner { width: 85%; }
+.aftereffects .progress-bar-inner { width: 97%; }
+.sketch .progress-bar-inner { width: 90%; }
+.html .progress-bar-inner { width: 90%; }
+.cssanimation .progress-bar-inner { width: 85%; }
+.communication .progress-bar-inner { width: 97%; }
+.creativity .progress-bar-inner { width: 90%; }
+
+
+#profile{
+  text-align: center;
+    margin: 10px 0;
+    flex-direction: column; /* Pastikan elemen diatur secara vertikal */
+    justify-content: center;
+    align-items: center;
+    height: 200vh; /* Agar seluruh bagian menyesuaikan tinggi layar */
+}
+
+#profile h2 {
+  font-size: 2rem;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  letter-spacing: 1px
+  
+}
+
+.portfolio {
+  padding: 50px 0 100px;
+  border: 1px solid #e5ebf2;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-content {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Membuat grid dengan ukuran minimal 200px */
+  gap: 20px; /* Jarak antar item */
+  justify-content: center;
+}
+
+/* ---- .item ---- */
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.isotope .item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  width: 100%; /* Mengatur lebar item sesuai kolom grid */
+  max-width: 300px; /* Maksimal lebar tiap item */
+  margin: 0 auto; /* Agar item berada di tengah */
+}
+
+/*.item img*/
+.isotope .item img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.isotope .item:hover img {
+  -webkit-transform: scale(1.1); /* Membatasi skala zoom menjadi lebih kecil */
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/*.isotope-overlay*/
+.isotope-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(31,44,108,.5);
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  justify-content: center;
+  flex-direction: row;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.isotope-overlay a {
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.isotope .item:hover .isotope-overlay {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  top: 0;
+}
+
+
+
+
+
+
+
+#portfolio {
+  text-align: center;
+  margin: 50px 0;
+  flex-direction: column; /* Pastikan elemen diatur secara vertikal */
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Agar seluruh bagian menyesuaikan tinggi layar */
+}
+#portfolio h2 {
+  font-size: 2rem;
+  margin-top: 200px;
+  text-transform: uppercase;
+  letter-spacing: 1px
+  
+}
+
+
+
+
+
+#contact {
+  text-align: center;
+  margin: 50px 10;
+  flex-direction: column; /* Pastikan elemen diatur secara vertikal */
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 100vh; /* Agar seluruh bagian menyesuaikan tinggi layar */
+}
+#contact h2 {
+  font-size: 2rem;
+ 
+  margin-top: 300px;
+  text-transform: uppercase;
+  letter-spacing: 1px
+  
+}
+
+.profiles {
+  padding:  50px 0 100px;
+  border:  1px solid #e5ebf2;
+}
+
+.profiles-content {padding-top: 50px;}
+.profiles-content .col-sm-3{padding:0;}
+.profile-txt {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.single-profile {
+  position: relative;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #b2c1ce;
+  overflow:hidden;
+  -webkit-transition:background 0.5s linear; 
+  -moz-transition:background 0.5s linear; 
+  -ms-transition:background 0.5s linear; 
+  -o-transition:background 0.5s linear; 
+  transition:background 0.5s linear;
+}
+.profile-icon-name {
+  text-transform: capitalize;
+  color: #636a82;
+  font-size: 16px;
+}
+.single-profile.profile-no-border{border-right:transparent;}
+.profile-border {
+  border-bottom: 1px solid #b2c1ce;
+}
+.single-profile-overlay{
+  display:flex;
+  align-items:center;
+  text-transform: capitalize;
+  justify-content:center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: " ";
+  width:100%;
+  height: 100%;
+  background: #d92cf9;
+  background: -moz-linear-gradient(left, #B04E75 0%, #D095AC 100%);
+  background: -webkit-linear-gradient(left, #B04E75 0%,#b636ff 100%);
+  background: linear-gradient(to right, #B04E75 0%,#b636ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d92cf9', endColorstr='#b636ff',GradientType=1 );
+  -webkit-transform:scale(0);
+  -moz-transform:scale(0);
+  -ms-transform:scale(0);
+  -o-transform:scale(0);
+  transform:scale(0);
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+.single-profile:hover .single-profile-overlay{
+  -webkit-transform:scale(1);
+  -moz-transform:scale(1);
+  -ms-transform:scale(1);
+  -o-transform:scale(1);
+  transform:scale(1);
+  top:0;
+}
+.single-profile:hover .profile-icon-name,.single-profile:hover .profile-txt a>i{color: #fff;}
+.single-profile:hover .profile-border {border:transparent;}
